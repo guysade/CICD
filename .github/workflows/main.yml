@@ -36,5 +36,5 @@ jobs:
         run: sudo kubectl apply -f /pythonApp/deployment.yml
       -
         name: Test App
-        run: curl http://52.137.3.210:32564/
+        run: curl http://52.137.3.210:32566/
         
