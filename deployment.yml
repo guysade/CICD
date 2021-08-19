@@ -16,13 +16,14 @@ spec:
       containers:
       - name: python-app
         image: guysade4/python-app:latest
-        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 5000
+        imagePullPolicy: Always
+
 ---
 apiVersion: v1
 kind: Service
