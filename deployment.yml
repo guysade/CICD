@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: python-app:latest
+        image: guysade4/python-app:latest
         resources:
           limits:
             memory: "128Mi"
