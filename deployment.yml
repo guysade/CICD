@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: python-app
 spec:
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: python-app
