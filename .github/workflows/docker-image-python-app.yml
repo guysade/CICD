@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Test
-      run: echo | curl http://52.137.3.210:32564/
+      run: echo | curl localhost:32564/
