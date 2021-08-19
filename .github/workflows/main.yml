@@ -33,5 +33,5 @@ jobs:
         run: docker pull guysade4/python-app:latest
       -
         name: Minikube Apply
-        run: kubectl apply -f /pythonApp/deployment.yml
+        run: sudo kubectl apply -f /pythonApp/deployment.yml
         
