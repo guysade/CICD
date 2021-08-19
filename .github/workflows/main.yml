@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker:
-    runs-on: self-hosted
+    runs-on: guy-ubuntu
     steps:
       -
         name: Set up QEMU
@@ -28,3 +28,10 @@ jobs:
         with:
           push: true
           tags: guysade4/python-app:latest
+      -
+        name: Pull image
+        run: docker pull guysade4/python-app:latest
+      -
+        name: Minikube Apply
+        run: sudo kubectl apply -f /pythonApp/deployment.yml
+        
