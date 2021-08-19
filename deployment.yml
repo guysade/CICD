@@ -14,6 +14,7 @@ spec:
       containers:
       - name: python-app
         image: guysade4/python-app:latest
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
