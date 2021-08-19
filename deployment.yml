@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pythonApp
+  name: python-app
 spec:
   selector:
     matchLabels:
-      app: pythonApp
+      app: python-app
   template:
     metadata:
       labels:
-        app: pythonApp
+        app: python-app
     spec:
       containers:
-      - name: pythonApp
+      - name: python-app
         image: python-app:latest
         resources:
           limits:
@@ -20,3 +20,15 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-app-service
+spec:
+  selector:
+    app: python-app
+  ports:
+  - port: 5000
+    targetPort: 5000
+
